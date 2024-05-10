@@ -2,7 +2,7 @@ module.exports = {
     catalogUrl: null,
     catalogTitle: "STAC Browser",
     allowExternalAccess: true, // Must be true if catalogUrl is not given
-    allowedDomains: [],
+    allowedDomains: ["api.canopy.umbra.space"],
     detectLocaleFromBrowser: true,
     storeLocale: true,
     locale: "en",
@@ -43,5 +43,10 @@ module.exports = {
     requestHeaders: {},
     requestQueryParameters: {},
     preprocessSTAC: null,
-    authConfig: null
+    authConfig: {
+        type: 'header',
+        key: 'Authorization',
+        formatter: token => `Bearer ${token}`, // This is an example, there's also the simpler variant to just provide the string 'Bearer' in this case
+        description: `Please retrieve the token from the Canopy UI at https://canopy.umbra.space/account!`
+      }
 };
