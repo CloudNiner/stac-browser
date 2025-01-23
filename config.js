@@ -13,6 +13,7 @@ module.exports = {
         "es",
         "en",
 //      "en-GB",
+//      "en-US",
         "fr",
 //      "fr-CA",
 //      "fr-CH",
@@ -20,7 +21,8 @@ module.exports = {
 //      "it-CH",
         "ro",
         "ja",
-        "pt"
+        "pt",
+//      "pt-BR"
     ],
     apiCatalogPriority: null,
     useTileLayerAsFallback: true,
@@ -42,6 +44,7 @@ module.exports = {
     crossOriginMedia: null,
     requestHeaders: {},
     requestQueryParameters: {},
+    socialSharing: ['email', 'bsky', 'mastodon', 'x'],
     preprocessSTAC: null,
     authConfig: {
         type: 'header',
